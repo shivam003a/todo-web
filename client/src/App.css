@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('./assets/bg1.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+/* Navbar section */
+.nav {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.logo {
+  letter-spacing: 3px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.underline-logo {
+  width: 68%;
+  height: 2px;
+  background-color: black;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation a {
+  padding: 6px 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.menu-button {
+  width: 26px;
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: transparent;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    opacity: 1;
+    background-color: white;
+  }
+
+  .menu-button {
+    width: 26px;
+    display: flex;
+  }
+
+  .n-active {
+    display: flex;
+  }
+
+  
+  .seen{
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px;
+}
+
+.hero div {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+}
+
+.hero-heading {
+  font-size: 60px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.hero-desc {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.get-started {
+  padding: 16px 22px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: black;
+  margin-top: 12px;
+  transition: all 0.5s;
+}
+
+.get-started:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 992px) and (min-width : 769px) {
+  .hero {
+    width: 769px;
+  }
+
+  .hero div {
+    width: 80%;
+    gap: 24px;
+  }
+
+  .hero-heading {
+    font-size: 52px;
+  }
+
+  .hero-desc {
+    font-size: 22px;
+  }
+
+  .get-started {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 28px;
+  }
+
+  .hero div {
+    gap: 22px;
+  }
+
+  .hero-heading {
+    font-size: 48px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+  }
+
+  .get-started {
+    padding: 12px 18px;
+  }
+}
+
+/* Register Section */
+.register-container {
+  width: 100vw;
+  height: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.register-card {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px #d3caca;
+}
+
+.register-left {
+  width: 54%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.register-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://picsum.photos/200/300');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.register-login {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  z-index: 4;
+}
+
+.register-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.register-design div {
+  width: 30%;
+  height: 2px;
+  background-color: black;
+}
+
+.register-left p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.register-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  z-index: 4;
+}
+
+.social-img {
+  width: 28px;
+}
+
+.register-right {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.register-right p {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.register-right input {
+  width: 80%;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 1200px) and (min-width : 993px) {
+  .register-container {
+    width: 993px;
+  }
+
+  .register-card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) and (min-width : 769px) {
+  .register-container {
+    width: 769px;
+  }
+
+  .register-card {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    width: 100vw;
+    max-width: 420px;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-card {
+    width: 90%;
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+
+  .register-left {
+    width: 100%;
+  }
+
+  .register-right {
+    width: 100%;
+  }
+}
+
+/* Login Section */
+.login-container {
+  width: 100vw;
+  height: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.login-card {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px #d3caca;
+}
+
+.login-left {
+  width: 54%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.login-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://picsum.photos/200/300');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.login-register {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  z-index: 4;
+}
+
+.login-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.login-design div {
+  width: 30%;
+  height: 2px;
+  background-color: black;
+}
+
+.login-left p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  z-index: 4;
+}
+
+.login-right {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.login-right p {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-right input {
+  width: 80%;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.symbol {
+  width: 80%;
+  position: relative;
+  cursor: pointer;
+}
+
+.symbol input {
+  width: 100%;
+}
+
+.symbol img {
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+.submit {
+  color: white;
+  background-color: black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+@media (max-width: 1200px) and (min-width : 993px) {
+  .login-container {
+    width: 993px;
+  }
+
+  .login-card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) and (min-width : 769px) {
+  .login-container {
+    width: 769px;
+  }
+
+  .login-card {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 100vw;
+    max-width: 420px;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-card {
+    width: 90%;
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+
+  .login-left {
+    width: 100%;
+  }
+
+  .login-right {
+    width: 100%;
+  }
+
+}
+
+/* Todos */
+.todoListPage {
+  width: 100vw;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Create Todo Page */
+.newTodoContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.newTodoContainer input {
+  width: 75%;
+  padding: 12px 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding-left: 4px;
+  background-color: transparent;
+}
+
+.newTodoContainer input::placeholder {
+  text-transform: uppercase;
+}
+
+.newTodoContainer button {
+  width: 25%;
+  padding: 12px 18px;
+  background-color: black;
+  outline: 0;
+  border: 0;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) and (min-width : 993px) {
+  .todoListPage {
+    width: 993px;
+  }
+
+  .newTodoContainer {
+    width: 40%;
+  }
+}
+
+@media (max-width: 992px) and (min-width : 769px) {
+  .todoListPage {
+    width: 769px;
+  }
+
+  .newTodoContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .todoListPage {
+    width: 100vw;
+  }
+
+  .newTodoContainer {
+    width: 90%;
+    max-width: 420px;
+  }
+}
+
+/* Get Todo */
+.todoList {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  overflow-y: scroll;
+}
+
+.todoList::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none
+}
+
+.singleTodo {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.singleTodo input:hover {
+  cursor: pointer;
+}
+
+.singleTodo p{
+  text-transform: capitalize;
+}
+
+.singleTodo div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.singleTodo img {
+  width: 20px;
+  height: 20px;
+}
+
+.undone {
+  background-color: #DDE2C6;
+}
+
+.done {
+  background-color: #BBC5AA;
+}
+
+@media (max-width: 1200px) and (min-width : 993px) {
+  .todoList {
+    width: 40%;
+  }
+}
+
+@media (max-width: 992px) and (min-width : 769px) {
+  .todoList {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .todoList {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  .singleTodo {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+}
+
+/* Loading */
+.css-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
